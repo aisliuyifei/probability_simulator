@@ -1,0 +1,28 @@
+<%= form_for(@hit) do |f| %>
+  <% if @hit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hit.errors.count, "error") %> prohibited this hit from being saved:</h2>
+
+      <ul>
+      <% @hit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :level %>
+  </div>
+  <div class="field">
+    <%= f.label "采用策略" %><br />
+    <%= f.select :strategy, [["不保护",0],["+6保护",1],["+7保护",2],["+6+7保护",3]] %>
+  </div>
+  <div class="field">
+    <%= f.label "vip加成+工会炉加成+强化日加成" %><br />
+    <%= f.number_field :bonus%>%
+  </div>
+  <div class="actions">
+    <%= f.submit "模拟" %>
+  </div>
+<% end %>

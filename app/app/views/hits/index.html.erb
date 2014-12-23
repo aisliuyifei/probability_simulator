@@ -1,0 +1,29 @@
+<h1>历次模拟</h1>
+
+<table>
+  <tr>
+    <th>强化类型</th>
+	<th>祝福策略</th>
+    <th>成本</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hits.each do |hit| %>
+  <tr>
+    <td><%= hit.level%>升<%=hit.level+1%></td>
+	<td><%= hit.strategy_name%></td>
+    <td><%= hit.cost %></td>
+    <td><%= hit.bonus %></td>
+    <td><%= link_to '查看明细', hit %></td>
+    <td><%= link_to '删除', hit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '9->10模拟', new_hit_path(:level=>9) %>|
+<%= link_to '10->11模拟', new_hit_path(:level=>10) %>|
+<%= link_to '11->12模拟', new_hit_path(:level=>11) %>

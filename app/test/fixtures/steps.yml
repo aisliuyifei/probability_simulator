@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hit_id: 1
+  current_level: 1
+  current_bless: 1
+  current_probability: 1
+  stone_level: 1
+  gold_using: 1
+
+two:
+  hit_id: 1
+  current_level: 1
+  current_bless: 1
+  current_probability: 1
+  stone_level: 1
+  gold_using: 1

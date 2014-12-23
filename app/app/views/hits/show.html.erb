@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Level:</b>
+  <%= @hit.level %>-><%=@hit.level+1%>
+</p>
+
+<p>
+  <b>策略:</b>
+  <%= @hit.strategy_name %>
+</p>
+
+<p>
+  <b>Bonus:</b>
+  <%= @hit.bonus %>
+</p>
+
+<p><%=raw @hit.desc%></p>
+
+
+<%= link_to 'Edit', edit_hit_path(@hit) %> |
+<%= link_to 'Back', hits_path %>
